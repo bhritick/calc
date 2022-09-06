@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+   <section>
+        <div class="container mt-5 pt-5">
+            <div class="row">
+
+               
+                <div class="col-md-6 col-12  ">
+                    <form class="card border border-white border-5 shadow rounded-0 mb-3 px-5 py-4 ">
+                        <div class="row ">
+                            <div class="col-12 text-center ">
+                                <h2>Investment Calculator</h2>
+                                <hr>
+                            </div>
+                            <div class=" col-12 ">
+                                <div class="form-group ">
+                                    <label for="fname " class="text-dark my-4 ">Investment Name</label>
+                                    <select class="form-select" id="inv_name">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="mailid " class="text-dark my-4 "> Capital</label>
+                                    <input type="email " class="form-control rounded-0 border-dark  shadow-none " id="inv_capt">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="mailid " class="text-dark my-4 "> Year of Investment</label>
+                                    <input type="email " class="form-control rounded-0 border-dark  shadow-none " id="inv_time">
+                                </div>
+                                
+                                <div class="form-group ">
+                                    <label for="telno " class="text-dark my-4 "> Results</label>
+                                    <input type="tel " class="form-control rounded-0 border-dark  shadow-none  " id="inv_result" disabled>
+                                </div> 
+                                <button type="button" class="btn btn-primary my-5" onclick="myFunction()">Primary</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+<script>
+function myFunction() {
+    const inv_name=parseInt(document.getElementById("inv_name").value);
+    const inv_capt=parseInt(document.getElementById("inv_capt").value);
+    const inv_time=parseInt(document.getElementById("inv_time").value);
+    const inv_sum=((inv_name*inv_time*inv_capt)/100)+inv_capt;
+    document.getElementById("inv_result").value=inv_sum;
+  console.log(inv_name, inv_time, inv_sum)
+}
+</script>
+</body>
+
+</html>
